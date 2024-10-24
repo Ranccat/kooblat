@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d84cdb10812bcc4d95ae42c98c99766, type: 3}
+  m_Name: FunnyConfig
+  m_EditorClassIdentifier: 
+  mazeConfig:
+    blockSize: 1
+    rowCount: 51
+    colCount: 31
+    emptyZoneRadius: 3
+    startSoftBlockSpawnRate: 0.5
+    endSoftBlockSpawnRate: 0
+    numPowerUpBlocks: 3
+    ventCols: 0d00000011000000
+    toxicGasReleaseTime: 2
+    toxicGasSpreadInterval: 0.25
+    hardBlockPrefab: {fileID: 104648234797656797, guid: 3cb6bfa5cd3520f4bbecc0bdee1e2526, type: 3}
+    softBlockPrefab: {fileID: 4862886386174446286, guid: 6f398c5140a28e1459262041a8acd517, type: 3}
+    powerUpBlockPrefab: {fileID: 6844175317279717061, guid: e7389216c11417f498198a12b17e944c, type: 3}
+    exitPrefab: {fileID: 8571849191552693735, guid: 5cca528bb2013694796f7dda4fb60498, type: 3}
+    ventPrefab: {fileID: 624370979451238505, guid: 0d18369198b1ed44792258040459e8e5, type: 3}
+    toxicGasPrefab: {fileID: 5810385370332870810, guid: e94a7b563e9b0a64bac54bc2c3e2d73d, type: 3}
+    floorPrefab: {fileID: 8354922344936035712, guid: 008d1a5f2f51db64b9f68838f9d4adeb, type: 3}
+  enemySpawnConfig:
+    initialDelay: 100000000
+    spawnInterval: 10
+    spawnCount: 2
+    spawnTypes:
+    - enemy: {fileID: 5902834917897459120, guid: 568208633a27d5e4788691dac35101c0, type: 3}
+      count: 0
+    - enemy: {fileID: 6459749892008752928, guid: 1865ada4d7f370446acc5394376116ee, type: 3}
+      count: 0
