@@ -1,15 +1,62 @@
-# Project K (개발 중)
+### 💬 게임 소개
 
-이 프로젝트는 현재 개발 중에 있습니다.
+---
 
-## 🔗 프로젝트 개요 및 상세 정보
+탐험을 위해 길을 나섰던 주인공이 미로에 갇혀서 탈출하는 게임입니다.
 
-프로젝트에 대한 자세한 설명은 [Notion](https://sleet-flame-fe6.notion.site/Project-K-125a180968be80528518f394628f919f)에서 확인하실 수 있습니다.
+💀 그러나 이런 위험들이 도사리고 있습니다.
 
-# Project K (Development)
+- 화면 밖에서 갑자기 등장하는 몬스터들
+- 플레이어 뒤에서 퍼지는 독가스
+- 갈수록 단단해지는 벽
 
-Welcome to the **Project K** repository! This project is currently under active development.
+⭐ 대신 플레이어를 돕기 위한 요소도 있습니다.
 
-## 🔗 Project Overview and Details
+- 초기에 주어지는 도끼와 활
+- 도끼로 부술 수 있는 일반 블록
+- 각종 이로운 효과를 제공하는 특수 블록
 
-For a detailed description, please refer to the full project documentation on [Notion](https://sleet-flame-fe6.notion.site/Project-K-125a180968be80528518f394628f919f).
+### 📖 프로젝트 개요
+
+---
+
+📅 기간 : 2024/08 ~ 2024/09
+
+👥 참여 인원 : 2인
+
+💼 주요 담당 역할 : 프로그래밍, UI 아트, BGM
+
+### 🛠️ 기술 스택
+
+---
+
+- Unity : 클라이언트 & 게임 로직
+- C# : 스크립트 작성
+- Git : 버전 관리 및 협업 툴
+
+### 🎖️ 프로그래밍 기여
+
+---
+
+1. 애니메이션 적용 및 키 이벤트 함수 작성
+2. 플레이어와 관련된 구현사항
+3. 특수 블록과 그에 해당하는 아이템
+4. 신규 몬스터 “터렛”
+5. Canvas와 UI Manager
+6. 플레이어 ↔ 몬스터 간의 전투 시스템
+7. A* 알고리즘에 적용될 Min Heap
+
+### ⚙️ 주요 아키텍처
+
+---
+
+1. IDamageable
+    - 데미지를 받을 수 있는 모든 개체는 해당 인터페이스를 사용합니다.
+    - OnDamage 함수를 반드시 구현해야합니다.
+    - 모든 데미지는 Damage라는 구조체로 주고받아집니다.
+2. Singleton Container
+    - Player, Maze, UI 3개의 싱글톤을 Game이라는 하나의 컨테이너가 들고 있습니다.
+    - 생성이 한 번만 될 수 있도록 보장하며, Get을 통해 해당 싱글톤에 접근할 수 있게 합니다.
+3. A* Pathfinding
+    - Manhattan 거리를 H 코스트로 사용하는 알고리즘입니다.
+    - 몬스터가 플레이어에게 최단 경로로 도달할 수 있게 도와줍니다.
